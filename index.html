@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101827"><link rel="manifest" href="manifest.webmanifest"><title>Калькулятор игровой экономики</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1220;--p:#121d2e;--p2:#1a2940;--line:#2b3a50;--t:#eef4ff;--m:#9fb0c6;--a:#65d6a6;--r:#ff8e8e}*{box-sizing:border-box}body{margin:0;background:linear-gradient(#101a2a,#0b1220 260px);color:var(--t);font:15px/1.45 system-ui}header,main{max-width:850px;margin:auto}header{padding:24px 18px 18px}h1{font-size:24px;margin:0 0 8px}header p,.note,.small{color:var(--m)}main{padding:0 14px 40px}.tabs{display:flex;gap:7px;overflow:auto;position:sticky;top:0;background:#0d1725;padding:5px 0 14px;z-index:3}.tab,button{border:1px solid var(--line);background:var(--p2);color:var(--t);padding:10px 13px;border-radius:11px;font:600 14px system-ui;white-space:nowrap}.tab{color:var(--m)}.tab.active{background:#24443d;border-color:#397a65;color:#dfffee}section{display:none}section.active{display:block}.card,.weapon{background:var(--p);border:1px solid var(--line);border-radius:16px;padding:15px;margin-bottom:13px}h2{font-size:18px;margin:0 0 12px}label{display:block;font-size:12px;color:var(--m);margin:0 0 5px}input{width:100%;min-width:0;background:#0b1422;border:1px solid #34445c;border-radius:10px;color:var(--t);padding:11px;font:inherit}input.invalid{border-color:var(--r);outline:1px solid var(--r)}input[aria-invalid="true"]{border-color:var(--r)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.resource{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end;padding:10px 0;border-bottom:1px solid #26364a}.unitcost{color:var(--a);font-weight:750;text-align:right}.weapon{background:#101a29;padding:13px}.weaponhead{display:flex;gap:8px;margin-bottom:10px}.weaponhead input{font-weight:700}.recipe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.costline,.total{display:flex;justify-content:space-between;gap:10px;padding:6px 0;color:var(--m);font-size:13px}.costline strong{color:var(--t)}.total{border-top:1px solid var(--line);margin-top:7px;padding-top:10px;align-items:center}.total b,.result{font-size:21px;color:var(--a);font-variant-numeric:tabular-nums}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.primary{background:#24634f;border-color:#39866c}.danger{color:#ffaaaa;background:#321e28;border-color:#75434a}.marketrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-items:end;margin:10px 0;padding-bottom:10px;border-bottom:1px solid var(--line)}.positive{color:var(--r)}.negative{color:var(--a)}.note{font-size:13px}.small{font-size:12px}footer{text-align:center;color:var(--m);font-size:12px;padding:15px}@media(min-width:650px){.recipe{grid-template-columns:repeat(3,minmax(0,1fr))}}
+:root{color-scheme:dark;--bg:#0b1220;--p:#121d2e;--p2:#1a2940;--line:#2b3a50;--t:#eef4ff;--m:#9fb0c6;--a:#65d6a6;--r:#ff8e8e}*{box-sizing:border-box}body{margin:0;background:linear-gradient(#101a2a,#0b1220 260px);color:var(--t);font:15px/1.45 system-ui}header,main{max-width:850px;margin:auto}header{padding:24px 18px 18px}h1{font-size:24px;margin:0 0 8px}header p,.note,.small{color:var(--m)}main{padding:0 14px 40px}.tabs{display:flex;gap:7px;overflow:auto;position:sticky;top:0;background:#0d1725;padding:5px 0 14px;z-index:3}.tab,button{border:1px solid var(--line);background:var(--p2);color:var(--t);padding:10px 13px;border-radius:11px;font:600 14px system-ui;white-space:nowrap}.tab{color:var(--m)}.tab.active{background:#24443d;border-color:#397a65;color:#dfffee}section{display:none}section.active{display:block}.card,.weapon{background:var(--p);border:1px solid var(--line);border-radius:16px;padding:15px;margin-bottom:13px}h2{font-size:18px;margin:0 0 12px}label{display:block;font-size:12px;color:var(--m);margin:0 0 5px}input.invalid{border-color:var(--r);outline:1px solid var(--r)}input{width:100%;min-width:0;background:#0b1422;border:1px solid #34445c;border-radius:10px;color:var(--t);padding:11px;font:inherit}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.resource{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end;padding:10px 0;border-bottom:1px solid #26364a}.unitcost{color:var(--a);font-weight:750;text-align:right}.weapon{background:#101a29;padding:13px}.weaponhead{display:flex;gap:8px;margin-bottom:10px}.weaponhead input{font-weight:700}.recipe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.costline,.total{display:flex;justify-content:space-between;gap:10px;padding:6px 0;color:var(--m);font-size:13px}.costline strong{color:var(--t)}.total{border-top:1px solid var(--line);margin-top:7px;padding-top:10px;align-items:center}.total b,.result{font-size:21px;color:var(--a);font-variant-numeric:tabular-nums}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.primary{background:#24634f;border-color:#39866c}.danger{color:#ffaaaa;background:#321e28;border-color:#75434a}.marketrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-items:end;margin:10px 0;padding-bottom:10px;border-bottom:1px solid var(--line)}.positive{color:var(--r)}.negative{color:var(--a)}.note{font-size:13px}.small{font-size:12px}footer{text-align:center;color:var(--m);font-size:12px;padding:15px}@media(min-width:650px){.recipe{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style></head><body><header><h1>Калькулятор игровой экономики</h1><p>Себестоимость ресурсов, вооружения и сравнение с рынком</p></header><main>
 <nav class="tabs"><button class="tab active" data-tab="mining">Добыча</button><button class="tab" data-tab="production">Производство</button><button class="tab" data-tab="market">Рынок</button><button class="tab" data-tab="formula">Формула</button></nav>
 <section id="mining" class="active"><div class="card"><h2>Доход и добыча за час</h2><label>Доход серебра за час</label><input id="income" type="number" min="0" value="30000"><p class="note">Серебро за минуту: <b id="perMinute">500</b>. Используется для оценки альтернативной стоимости времени.</p></div><div class="card"><h2>Добыча ресурсов за час</h2><div id="resources"></div><p class="note">Цена единицы ресурса = доход серебра за час ÷ добыча ресурса за час.</p></div></section>
@@ -9,145 +9,41 @@
 <section id="market"><div class="card"><h2>Сравнение с рынком</h2><p class="note">Введи рыночную цену, чтобы увидеть разницу и процент отклонения от себестоимости.</p><div id="marketRows"></div></div></section>
 <section id="formula"><div class="card"><h2>Формулы расчёта</h2><p><b>Стоимость единицы ресурса</b><br>Доход серебра за час ÷ добыча ресурса за час.</p><p><b>Стоимость времени производства одной единицы</b><br>Доход серебра за час ÷ количество произведённых единиц за час.</p><p><b>Полная экономическая себестоимость</b><br>Стоимость материалов + прямые затраты серебра + альтернативная стоимость времени производства.</p><p class="note">Стоимость времени добычи уже включена в цену ресурсов. Поэтому она не добавляется повторно при расчёте изделия.</p></div><div class="card"><h2>Допущения</h2><ul class="note"><li>Одновременно выполняется только одно действие.</li><li>Используются введённые средние показатели добычи.</li><li>Не учитываются фабричные расходы, логистика, налоги и бонусы навыков.</li><li>Для точности укажи фактический выпуск фабрики за час.</li></ul></div></section><footer>Данные автоматически сохраняются в браузере на этом устройстве.</footer></main>
 <script>
-const defaults=[
- {name:"Пехотное снаряжение",ore:1,oil:0,coal:0,direct:100,rate:100,market:""},
- {name:"Пехотное оснащение",ore:1,oil:0,coal:0,direct:200,rate:20,market:""},
- {name:"Артиллерия",ore:2,oil:0,coal:0,direct:200,rate:20,market:""},
- {name:"Дрон",ore:1,oil:1,coal:0,direct:150,rate:20,market:""},
- {name:"Танк",ore:3,oil:2,coal:0,direct:400,rate:20,market:""},
- {name:"Истребитель",ore:5,oil:4,coal:0,direct:500,rate:20,market:""},
- {name:"Эсминец",ore:10,oil:5,coal:5,direct:400,rate:10,market:""}
-];
+const defaults=[{name:"Пехотное снаряжение",ore:1,oil:0,coal:0,direct:100,rate:100,market:""},{name:"Пехотное оснащение",ore:1,oil:0,coal:0,direct:200,rate:20,market:""},{name:"Артиллерия",ore:2,oil:0,coal:0,direct:200,rate:20,market:""},{name:"Дрон",ore:1,oil:1,coal:0,direct:150,rate:20,market:""},{name:"Танк",ore:3,oil:2,coal:0,direct:400,rate:20,market:""},{name:"Истребитель",ore:5,oil:4,coal:0,direct:500,rate:20,market:""},{name:"Эсминец",ore:10,oil:5,coal:5,direct:400,rate:10,market:""}];
 const initial={income:30000,resources:{oil:{name:"Нефть",yield:65},coal:{name:"Уголь",yield:175},ore:{name:"Руда",yield:125}},weapons:defaults};
-const $=id=>document.getElementById(id);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-// Поддерживает десятичную запятую/точку и пробелы-разделители тысяч.
-function parseNum(value){
- const raw=String(value??"").trim().replace(/[\s\u00a0\u202f]/g,"");
- if(raw==="") return 0;
- if(/[eE]/.test(raw) || !/^[+]?(?:\d+(?:[.,]\d*)?|[.,]\d+)$/.test(raw)) return null;
- const normalized=raw.replace(",",".");
- const result=Number(normalized);
- return Number.isFinite(result)&&result>=0?result:null;
-}
-const n=v=>{const parsed=parseNum(v);return parsed===null?0:parsed};
-const fmt=v=>Number.isFinite(v)?v.toLocaleString("ru-RU",{maximumFractionDigits:2}):"—";
-let state;
-try{
- const saved=JSON.parse(localStorage.getItem("economyCalcV1"));
- state=saved&&typeof saved==="object"?saved:JSON.parse(JSON.stringify(initial));
-}catch(e){state=JSON.parse(JSON.stringify(initial))}
-function normalizeState(){
- if(!state.resources||!state.weapons||!Array.isArray(state.weapons)) state=JSON.parse(JSON.stringify(initial));
- state.income=state.income??initial.income;
- for(const k of ["oil","coal","ore"]){
-  state.resources[k]??=JSON.parse(JSON.stringify(initial.resources[k]));
-  state.resources[k].name??=initial.resources[k].name;
-  state.resources[k].yield??=initial.resources[k].yield;
- }
- state.weapons.forEach(w=>{
-  for(const k of ["ore","oil","coal","direct","rate"]) w[k]??=0;
-  w.name??="Без названия";w.market??="";
- });
-}
-normalizeState();
-function rc(k){const y=n(state.resources[k].yield);return y?n(state.income)/y:0}
-function wc(w){
- const materials=rc("ore")*n(w.ore)+rc("oil")*n(w.oil)+rc("coal")*n(w.coal);
- const time=n(w.rate)?n(state.income)/n(w.rate):0;
- return {materials,time,total:materials+n(w.direct)+time};
-}
-function save(){try{localStorage.setItem("economyCalcV1",JSON.stringify(state))}catch(e){console.warn("Не удалось сохранить данные",e)}}
-function numericInput(value,attrs=""){
- return `<input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="${esc(value)}" ${attrs}>`;
-}
+const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function parseNum(v){let s=String(v??'').trim().replace(/[\s\u00a0\u202f]/g,'');if(s==='')return 0;if(!/^[+]?(?:\d+(?:[.,]\d*)?|[.,]\d+)$/.test(s))return null;let x=Number(s.replace(',','.'));return Number.isFinite(x)&&x>=0?x:null}
+const n=v=>{let x=parseNum(v);return x===null?0:x}, fmt=v=>Number.isFinite(v)?v.toLocaleString('ru-RU',{maximumFractionDigits:2}):'—';
+let state;try{state=JSON.parse(localStorage.getItem('economyCalcV1'))||JSON.parse(JSON.stringify(initial))}catch(e){state=JSON.parse(JSON.stringify(initial))}
+if(!state.resources||!Array.isArray(state.weapons)){state=JSON.parse(JSON.stringify(initial))}
+for(const k of ['oil','coal','ore']){state.resources[k]??=JSON.parse(JSON.stringify(initial.resources[k]));state.resources[k].yield??=initial.resources[k].yield;state.resources[k].name??=initial.resources[k].name}
+state.income??=initial.income;state.weapons.forEach(w=>{for(const k of ['ore','oil','coal','direct','rate'])w[k]??=0;w.name??='Без названия';w.market??=''});
+function rc(k){let y=n(state.resources[k].yield);return y?n(state.income)/y:0}
+function wc(w){let materials=rc('ore')*n(w.ore)+rc('oil')*n(w.oil)+rc('coal')*n(w.coal),time=n(w.rate)?n(state.income)/n(w.rate):0;return{materials,time,total:materials+n(w.direct)+time}}
+function save(){try{localStorage.setItem('economyCalcV1',JSON.stringify(state))}catch(e){}}
+function input(v,attrs=''){return `<input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="${esc(v)}" ${attrs}>`}
 function render(){
- $("income").type="text";$("income").inputMode="decimal";$("income").value=state.income;
- $("perMinute").textContent=fmt(n(state.income)/60);
- $("resources").innerHTML=["oil","coal","ore"].map(k=>`<div class="resource"><div><label>${esc(state.resources[k].name)}, ед./час</label>${numericInput(state.resources[k].yield,`data-resource="${k}" aria-label="Добыча: ${esc(state.resources[k].name)}"`)}</div><div><div class="small">Цена одной единицы</div><div class="unitcost" data-resource-cost="${k}">${fmt(rc(k))} серебра</div></div></div>`).join("");
- $("weapons").innerHTML=state.weapons.map((w,i)=>`<div class="weapon" data-i="${i}"><div class="weaponhead"><input data-k="name" aria-label="Название" value="${esc(w.name)}"><button class="danger" data-del="${i}" type="button">Удалить</button></div><div class="recipe">${[["ore","Руда"],["oil","Нефть"],["coal","Уголь"],["direct","Прямые затраты серебра"],["rate","Выпуск за час"]].map(([k,l])=>`<div><label>${l}</label>${numericInput(w[k],`data-k="${k}" aria-label="${l}"`)}</div>`).join("")}</div><div class="costline"><span>Материалы</span><strong data-cost="materials">${fmt(wc(w).materials)}</strong></div><div class="costline"><span>Время производства</span><strong data-cost="time">${fmt(wc(w).time)}</strong></div><div class="costline"><span>Прямые затраты</span><strong data-cost="direct">${fmt(n(w.direct))}</strong></div><div class="total"><span>Себестоимость за 1 ед.</span><b data-cost="total">${fmt(wc(w).total)}</b></div></div>`).join("");
- $("summary").innerHTML=state.weapons.map((w,i)=>`<div class="costline"><span data-summary-name="${i}">${esc(w.name)}</span><strong data-summary-cost="${i}">${fmt(wc(w).total)} серебра</strong></div>`).join("");
- $("marketRows").innerHTML=state.weapons.map((w,i)=>`<div class="marketrow" data-market-row="${i}"><div><b data-market-name="${i}">${esc(w.name)}</b><div class="small">Себестоимость <span data-market-cost="${i}">${fmt(wc(w).total)}</span></div></div><div><label>Цена рынка</label>${numericInput(w.market,`data-market="${i}" placeholder="Цена" aria-label="Рыночная цена: ${esc(w.name)}"`)}</div><div><div class="small">Разница</div><strong data-market-diff="${i}">—</strong></div></div>`).join("");
- refreshCalculations();save();
+ $('income').type='text';$('income').inputMode='decimal';$('income').value=state.income;
+ $('perMinute').textContent=fmt(n(state.income)/60);
+ $('resources').innerHTML=['oil','coal','ore'].map(k=>`<div class="resource"><div><label>${esc(state.resources[k].name)}, ед./час</label>${input(state.resources[k].yield,`data-resource="${k}" aria-label="Добыча ${esc(state.resources[k].name)}"`)}</div><div><div class="small">Цена одной единицы</div><div class="unitcost" data-resource-cost="${k}">${fmt(rc(k))} серебра</div></div></div>`).join('');
+ $('weapons').innerHTML=state.weapons.map((w,i)=>`<div class="weapon" data-i="${i}"><div class="weaponhead">${input(w.name,`data-k="name" aria-label="Название позиции"`)}<button class="danger" data-del="${i}" type="button">Удалить</button></div><div class="recipe">${[['ore','Руда'],['oil','Нефть'],['coal','Уголь'],['direct','Прямые затраты серебра'],['rate','Выпуск за час']].map(([k,l])=>`<div><label>${l}</label>${input(w[k],`data-k="${k}" aria-label="${l}"`)}</div>`).join('')}</div><div class="costline"><span>Материалы</span><strong data-cost="materials">${fmt(wc(w).materials)}</strong></div><div class="costline"><span>Время производства</span><strong data-cost="time">${fmt(wc(w).time)}</strong></div><div class="costline"><span>Прямые затраты</span><strong data-cost="direct">${fmt(n(w.direct))}</strong></div><div class="total"><span>Себестоимость за 1 ед.</span><b data-cost="total">${fmt(wc(w).total)}</b></div></div>`).join('');
+ $('summary').innerHTML=state.weapons.map((w,i)=>`<div class="costline"><span data-summary-name="${i}">${esc(w.name)}</span><strong data-summary-cost="${i}">${fmt(wc(w).total)} серебра</strong></div>`).join('');
+ $('marketRows').innerHTML=state.weapons.map((w,i)=>`<div class="marketrow"><div><b data-market-name="${i}">${esc(w.name)}</b><div class="small">Себестоимость <span data-market-cost="${i}">${fmt(wc(w).total)}</span></div></div><div><label>Цена рынка</label>${input(w.market,`data-market="${i}" placeholder="Цена" aria-label="Рыночная цена ${esc(w.name)}"`)}</div><div><div class="small">Разница</div><strong data-market-diff="${i}">—</strong></div></div>`).join('');
+ refresh();save();
 }
-function refreshCalculations(){
- $("perMinute").textContent=fmt(n(state.income)/60);
- for(const k of ["oil","coal","ore"]){
-  const el=document.querySelector(`[data-resource-cost="${k}"]`);
-  if(el)el.textContent=fmt(rc(k))+" серебра";
- }
- state.weapons.forEach((w,i)=>{
-  const card=document.querySelector(`.weapon[data-i="${i}"]`);
-  if(card){
-   const c=wc(w);
-   card.querySelector('[data-cost="materials"]').textContent=fmt(c.materials);
-   card.querySelector('[data-cost="time"]').textContent=fmt(c.time);
-   card.querySelector('[data-cost="direct"]').textContent=fmt(n(w.direct));
-   card.querySelector('[data-cost="total"]').textContent=fmt(c.total);
-  }
-  const summaryName=document.querySelector(`[data-summary-name="${i}"]`);
-  const summaryCost=document.querySelector(`[data-summary-cost="${i}"]`);
-  if(summaryName)summaryName.textContent=w.name;
-  if(summaryCost)summaryCost.textContent=fmt(wc(w).total)+" серебра";
-  const marketName=document.querySelector(`[data-market-name="${i}"]`);
-  const marketCost=document.querySelector(`[data-market-cost="${i}"]`);
-  const diff=document.querySelector(`[data-market-diff="${i}"]`);
-  if(marketName)marketName.textContent=w.name;
-  if(marketCost)marketCost.textContent=fmt(wc(w).total);
-  if(diff){
-   const p=String(w.market).trim()===""?null:parseNum(w.market);
-   const c=wc(w).total,d=p===null?0:p-c,pct=p===null||!c?0:d/c*100;
-   diff.className=p===null?"":(d>=0?"positive":"negative");
-   diff.textContent=p===null?"—":`${fmt(d)} (${fmt(pct)}%)`;
-  }
- });
+function refresh(){
+ $('perMinute').textContent=fmt(n(state.income)/60);
+ for(const k of ['oil','coal','ore']){let e=document.querySelector(`[data-resource-cost="${k}"]`);if(e)e.textContent=fmt(rc(k))+' серебра'}
+ state.weapons.forEach((w,i)=>{let c=wc(w),card=document.querySelector(`.weapon[data-i="${i}"]`);if(card){for(const [k,v] of Object.entries({materials:c.materials,time:c.time,direct:n(w.direct),total:c.total})){let e=card.querySelector(`[data-cost="${k}"]`);if(e)e.textContent=fmt(v)}}let sn=document.querySelector(`[data-summary-name="${i}"]`),sc=document.querySelector(`[data-summary-cost="${i}"]`),mn=document.querySelector(`[data-market-name="${i}"]`),mc=document.querySelector(`[data-market-cost="${i}"]`),md=document.querySelector(`[data-market-diff="${i}"]`);if(sn)sn.textContent=w.name;if(sc)sc.textContent=fmt(c.total)+' серебра';if(mn)mn.textContent=w.name;if(mc)mc.textContent=fmt(c.total);if(md){let p=String(w.market??'').trim()===''?null:parseNum(w.market),d=p===null?0:p-c.total,pct=p===null||!c.total?0:d/c.total*100;md.className=p===null?'':d>=0?'positive':'negative';md.textContent=p===null?'—':`${fmt(d)} (${fmt(pct)}%)`}})
 }
-function updateNumeric(target,value){
- target.setAttribute("aria-invalid","false");
- target.classList.remove("invalid");
- if(target.id==="income")state.income=value;
- else if(target.dataset.resource)state.resources[target.dataset.resource].yield=value;
- else if(target.dataset.market!==undefined)state.weapons[+target.dataset.market].market=value;
- else if(target.dataset.k){
-  const card=target.closest(".weapon");if(!card)return;
-  const w=state.weapons[+card.dataset.i];
-  if(target.dataset.k==="name")w.name=value;else w[target.dataset.k]=value;
- }
- save();refreshCalculations();
-}
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
- document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));
- document.querySelectorAll("main section").forEach(s=>s.classList.toggle("active",s.id===b.dataset.tab));
-});
-function handleInput(e){
- const t=e.target;
- if(t.id!=="income"&&!t.dataset.resource&&t.dataset.market===undefined&&!t.dataset.k)return;
- if(t.dataset.k==="name"){updateNumeric(t,t.value);return}
- const parsed=parseNum(t.value);
- if(parsed===null){t.setAttribute("aria-invalid","true");t.classList.add("invalid");return}
- updateNumeric(t,t.value.trim()===""?"":parsed);
-}
-$("income").addEventListener("input",handleInput);
-$("resources").addEventListener("input",handleInput);
-$("weapons").addEventListener("input",handleInput);
-$("marketRows").addEventListener("input",handleInput);
-document.addEventListener("change",e=>{
- const t=e.target;
- if(t.id!=="income"&&!t.dataset.resource&&t.dataset.market===undefined&&!t.dataset.k)return;
- if(t.dataset.k==="name")return;
- const parsed=parseNum(t.value);
- if(parsed===null){t.value=t.dataset.market!==undefined?(state.weapons[+t.dataset.market].market??""):t.id==="income"?state.income:t.dataset.resource?state.resources[t.dataset.resource].yield:state.weapons[+t.closest(".weapon").dataset.i][t.dataset.k];t.setAttribute("aria-invalid","false");t.classList.remove("invalid")}
- else {t.value=t.value.trim()===""?"":String(parsed);updateNumeric(t,t.value)}
-});
-$("weapons").onclick=e=>{
- if(e.target.dataset.del!==undefined){state.weapons.splice(+e.target.dataset.del,1);render()}
-};
-$("addWeapon").onclick=()=>{state.weapons.push({name:"Новая позиция",ore:0,oil:0,coal:0,direct:0,rate:1,market:""});render()};
-$("resetWeapons").onclick=()=>{if(confirm("Заменить текущие рецепты исходными?")){state.weapons=JSON.parse(JSON.stringify(defaults));render()}};
-$("copyResults").onclick=async()=>{
- const out=["Себестоимость ресурсов:",...["oil","coal","ore"].map(k=>state.resources[k].name+": "+fmt(rc(k))),"","Себестоимость вооружения:",...state.weapons.map(w=>w.name+": "+fmt(wc(w).total))].join("\n");
- try{await navigator.clipboard.writeText(out);$("copyResults").textContent="Скопировано"}catch(e){alert(out)}
-};
-render();
-if("serviceWorker"in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+function handle(e){let t=e.target;if(t.id!=='income'&&!t.dataset.resource&&t.dataset.market===undefined&&!t.dataset.k)return;if(t.dataset.k==='name'){state.weapons[+t.closest('.weapon').dataset.i].name=t.value;save();refresh();return}let val=parseNum(t.value);if(val===null){t.classList.add('invalid');t.setAttribute('aria-invalid','true');return}t.classList.remove('invalid');t.setAttribute('aria-invalid','false');if(t.id==='income')state.income=t.value.trim()===''?'':val;else if(t.dataset.resource)state.resources[t.dataset.resource].yield=t.value.trim()===''?'':val;else if(t.dataset.market!==undefined)state.weapons[+t.dataset.market].market=t.value;else state.weapons[+t.closest('.weapon').dataset.i][t.dataset.k]=t.value.trim()===''?'':val;save();refresh()}
+// ВАЖНО: input-обработчики только обновляют данные и текст расчётов. Поля не пересоздаются, фокус не теряется.
+['income','resources','weapons','marketRows'].forEach(id=>$(id).addEventListener('input',handle));
+document.addEventListener('focusout',e=>{let t=e.target;if(t.id!=='income'&&!t.dataset.resource&&t.dataset.market===undefined&&!t.dataset.k)return;if(t.dataset.k==='name')return;let v=parseNum(t.value);if(v!==null&&t.value.trim()!=='')t.value=String(v)});
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('main section').forEach(s=>s.classList.toggle('active',s.id===b.dataset.tab))});
+$('weapons').addEventListener('click',e=>{if(e.target.dataset.del!==undefined){state.weapons.splice(+e.target.dataset.del,1);render()}});
+$('addWeapon').onclick=()=>{state.weapons.push({name:'Новая позиция',ore:0,oil:0,coal:0,direct:0,rate:1,market:''});render()};
+$('resetWeapons').onclick=()=>{if(confirm('Заменить текущие рецепты исходными?')){state.weapons=JSON.parse(JSON.stringify(defaults));render()}};
+$('copyResults').onclick=async()=>{let out=['Себестоимость ресурсов:',...['oil','coal','ore'].map(k=>state.resources[k].name+': '+fmt(rc(k))),'','Себестоимость вооружения:',...state.weapons.map(w=>w.name+': '+fmt(wc(w).total))].join('\n');try{await navigator.clipboard.writeText(out);$('copyResults').textContent='Скопировано'}catch(e){alert(out)}};
+render();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script></body></html>
